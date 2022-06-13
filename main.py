@@ -12,7 +12,7 @@ a = np.nan
 Start = []
 f = True
 
-print('Timing Genius Plus 1.0\n(c)Todd Brown 2022\n')
+print('Timing Genius Plus 1.1\n(c)Todd Brown 2022\n')
 while f is True:
     BIBS = input(
         'Path of name/bibs ".csv" file (optional)\nHit "Enter" if names:bib file not to be used:'
@@ -33,7 +33,6 @@ while f is True:
 laps = int(input('Max laps to be recorded: '))
 if laps < 2:
     laps = 2
-racers = int(input('Apx. # of racers to be recorded: '))
 
 # Create Blank Dict of Laps for DataFrame
 Laps = {}
@@ -41,7 +40,7 @@ for i in range(1, laps + 1):
     Laps['lap ' + str(i)] = list()
 
 #Create Empty DataFrame
-Lapsdf = pd.DataFrame(index=range(int(racers) * 5))
+Lapsdf = pd.DataFrame(index=range(300))
 Lapsdf['Bib'] = np.nan
 Lapsdf['lap 0'] = np.nan
 for i in Laps.keys():
